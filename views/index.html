@@ -2,21 +2,37 @@
 <html>
 <head>
     <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/layout.css">
 </head>
 <body>
 <header>
     <h1>DHTML Kitchen</h1>
 </header>
 
-<nav>
-    <ul>
-        <li>[search]
-        <li> - tags -
-        <li>pages
-    </ul>
-</nav>
+<div id="main-content">
+    <button id="split-toggle">collapse</button>
+    <div id="split-container">
+        <div id="left-pane" class="pane">
+            <nav>
+                <ul>
+                    <li>[search]
+                    <li> - tags -
+                    <li>pages
+                </ul>
+            </nav>
+        </div>
+        <div id="right-pane" class="pane">
+            <div class="entry">
+                <h2><%= "entry.title" %></h2>
+                <p><%= "entry.date" %></p>
+                <p><%= "entry.body" %></p>
 
-<h2><%= entry.title %></h2>
+                <div><%= "entry.tags" %></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/javascripts/layout.js" async></script>
 
 </body>
 </html>

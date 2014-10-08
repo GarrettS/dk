@@ -1,0 +1,68 @@
+body, html {
+    height: 100%;
+    background: #999;
+}
+
+#main-content {
+    position: relative;
+    top: 10px;
+}
+
+#split-toggle {
+    position: relative;
+    left: 30px;
+}
+
+#split-container {
+    position: relative;
+    width: 95%;
+    margin: auto;
+    border: 1px solid #ccc;
+    height: 500px;
+}
+
+#left-pane {
+    width: 300px;
+    background: #f9f9f9;
+    border-right: 1px solid #333;
+    left: 0;
+    z-index: 10;
+}
+
+.pane {
+    position: absolute;
+    height: 100%;
+    /* http://cubic-bezier.com/ */
+    transition: .7s cubic-bezier(.6, .25, .5, 1.25);
+}
+
+#right-pane {
+    right: 0;
+    left: 300px;
+    padding: 0 12px;
+    background-color: #eee;
+}
+
+.split-collapsed #left-pane {
+    width: 0px;
+    opacity: .1;
+    color: #ccc;
+
+}
+
+.split-collapsed #right-pane {
+    left: 0;
+    background: #fff;
+    z-index: 10.01;
+    font-size: larger;
+    opacity: 1;
+}
+
+
+p {
+    margin: 12px;
+}
+
+#left-pane > ul {
+    white-space: nowrap;
+}
